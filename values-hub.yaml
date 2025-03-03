@@ -28,11 +28,11 @@ clusterGroup:
       channel: stable
       source: redhat-operators
 
-    habana-ai:
-      name: habana-ai-operator
-      namespace: habana-ai-operator
-      channel: stable
-      source: certified-operators
+    # habana-ai:
+    #   name: habana-ai-operator
+    #   namespace: habana-ai-operator
+    #   channel: stable
+    #   source: certified-operators
 
     rhods:
       name: rhods-operator
