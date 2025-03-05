@@ -22,7 +22,7 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
-      dockerfilePath: comps/llms/text-generation/tgi/Dockerfile
+      dockerfilePath: comps/llms/src/text-generation/Dockerfile #ref: https://github.com/opea-project/GenAIComps/blob/main/comps/llms/src/text-generation/Dockerfile
       {{- if .Values.global.gaudillm.build_envs }}
       env:
       {{- range .Values.global.gaudillm.build_envs }}

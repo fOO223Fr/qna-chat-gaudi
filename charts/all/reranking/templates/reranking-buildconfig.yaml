@@ -22,7 +22,7 @@ spec:
   strategy:
     type: Docker
     dockerStrategy:
-      dockerfilePath: /home/user/comps/rerankings/src #ref: https://github.com/opea-project/GenAIComps/blob/1064b2b689b5e5b1b2065a9642ba950559c3fb48/comps/rerankings/src/Dockerfile#L43C9-L43C40
+      dockerfilePath: comps/rerankings/src/Dockerfile #ref: https://github.com/opea-project/GenAIComps/blob/1064b2b689b5e5b1b2065a9642ba950559c3fb48/comps/rerankings/src/Dockerfile
       {{- if .Values.global.gaudillm.build_envs }}
       env:
       {{- range .Values.global.gaudillm.build_envs }}

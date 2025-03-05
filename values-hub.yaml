@@ -5,34 +5,34 @@ clusterGroup:
     - open-cluster-management
     - vault
     - golang-external-secrets
-    # - openshift-nfd
-    # - habana-ai-operator
-    # - openshift-kmm:
-    #     operatorGroup: true
-    #     targetNamespaces: 
+    - openshift-nfd
+    - habana-ai-operator
+    - openshift-kmm:
+        operatorGroup: true
+        targetNamespaces: 
     - redhat-ods-operator:
         operatorGroup: true
         targetNamespaces: 
     - gaudi-llm
 
   subscriptions:    
-    # nfd:
-    #   name: nfd
-    #   namespace: openshift-nfd
-    #   channel: stable
-    #   source: redhat-operators
+    nfd:
+      name: nfd
+      namespace: openshift-nfd
+      channel: stable
+      source: redhat-operators
 
-    # kmm:
-    #   name: kernel-module-management
-    #   namespace: openshift-kmm
-    #   channel: stable
-    #   source: redhat-operators
+    kmm:
+      name: kernel-module-management
+      namespace: openshift-kmm
+      channel: stable
+      source: redhat-operators
 
-    # habana-ai:
-    #   name: habana-ai-operator
-    #   namespace: habana-ai-operator
-    #   channel: stable
-    #   source: certified-operators
+    habana-ai:
+      name: habana-ai-operator
+      namespace: habana-ai-operator
+      channel: stable
+      source: certified-operators
 
     rhods:
       name: rhods-operator
@@ -55,9 +55,9 @@ clusterGroup:
 
   projects:
     - hub
-    # - openshift-nfd
-    # - openshift-kmm
-    # - habana-ai-operator
+    - openshift-nfd
+    - openshift-kmm
+    - habana-ai-operator
     - redhat-ods-operator
     - gaudi-llm
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
@@ -91,42 +91,42 @@ clusterGroup:
       namespace: golang-external-secrets
       project: hub
       path: common/golang-external-secrets
-    # nfd:
-    #   name: nfd
-    #   namespace: openshift-nfd
-    #   project: openshift-nfd
-    #   path: charts/all/nfd
-    #   ignoreDifferences:
-    #   - group: nfd.openshift.io
-    #     kind: NodeFeatureDiscovery
-    #     jqPathExpressions:
-    #     - '.spec.customConfig'
-    #     - '.spec.topologyupdater'
-    # kmm:
-    #   name: kmm
-    #   namespace: openshift-kmm
-    #   project: openshift-kmm
-    #   path: charts/all/kmm
-    # openshift-data-foundations:
-    #   name: odf
-    #   namespace: openshift-storage
-    #   project: hub
-    #   path: charts/all/openshift-data-foundations
-    # habana-ai:
-    #   name: habana-ai
-    #   namespace: habana-ai-operator
-    #   project: habana-ai-operator
-    #   path: charts/all/habana-ai
+    nfd:
+      name: nfd
+      namespace: openshift-nfd
+      project: openshift-nfd
+      path: charts/all/nfd
+      ignoreDifferences:
+      - group: nfd.openshift.io
+        kind: NodeFeatureDiscovery
+        jqPathExpressions:
+        - '.spec.customConfig'
+        - '.spec.topologyupdater'
+    kmm:
+      name: kmm
+      namespace: openshift-kmm
+      project: openshift-kmm
+      path: charts/all/kmm
+    openshift-data-foundations:
+      name: odf
+      namespace: openshift-storage
+      project: hub
+      path: charts/all/openshift-data-foundations
+    habana-ai:
+      name: habana-ai
+      namespace: habana-ai-operator
+      project: habana-ai-operator
+      path: charts/all/habana-ai
     rhods-operator:
       name: rhods-operator
       namespace: redhat-ods-operator
       project: redhat-ods-operator
       path: charts/all/rhods-operator
-    # rhods-gaudi-addons:
-    #   name: rhods-gaudi-addons
-    #   namespace: redhat-ods-operator
-    #   project: redhat-ods-operator
-    #   path: charts/all/rhods-operator-gaudi-addons
+    rhods-gaudi-addons:
+      name: rhods-gaudi-addons
+      namespace: redhat-ods-operator
+      project: redhat-ods-operator
+      path: charts/all/rhods-operator-gaudi-addons
     tei-xeon-service:
       name: tei-xeon-service
       namespace: gaudi-llm
