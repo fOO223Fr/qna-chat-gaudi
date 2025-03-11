@@ -8,9 +8,9 @@ metadata:
   namespace: {{ .Values.global.gaudillm.namespace }}
 spec:
   host: megaservice-{{ .Values.global.gaudillm.namespace }}.apps.{{ .Values.global.clusterDomain }}
-  path: /v1/dataprep
+  path: /v1/dataprep/ingest
   port:
-    targetPort: 6007
+    targetPort: 5000
   to:
     kind: Service
     name: dataprep

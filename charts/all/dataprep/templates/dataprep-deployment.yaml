@@ -46,13 +46,13 @@ spec:
           image: {{ .Values.global.gaudillm.dataprep.image }}
           name: dataprep-redis-server
           ports:
-            - containerPort: 6007
+            - containerPort: 5000
               protocol: TCP
           volumeMounts:
             - name: temp-data
               mountPath: /tmp/temp-data
             - name: uploaded-files
-              mountPath: /home/user/comps/dataprep/redis/langchain/uploaded_files
+              mountPath: /home/user/comps/dataprep/src/uploaded_files
       restartPolicy: Always
       volumes:
         - name: temp-data

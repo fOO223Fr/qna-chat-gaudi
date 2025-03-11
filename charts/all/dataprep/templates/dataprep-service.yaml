@@ -12,8 +12,8 @@ metadata:
   namespace: {{ .Values.global.gaudillm.namespace }}
 spec:
   ports:
-    - name: "6007"
-      port: 6007
-      targetPort: 6007
+    - name: "5000"
+      port: 5000
+      targetPort: 5000
   selector:
     io.kompose.service: dataprep-redis
