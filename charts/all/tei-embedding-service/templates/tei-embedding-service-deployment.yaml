@@ -26,6 +26,8 @@ spec:
         io.kompose.network/chatqna-default: "true"
         io.kompose.service: tei-embedding-service
     spec:
+      nodeSelector:
+        node.kubernetes.io/instance-type: c7i.4xlarge
       containers:
         - args:
             - --model-id
@@ -55,11 +57,11 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
-          resources:
-            limits:
-              habana.ai/gaudi: "1"
-            requests:
-              habana.ai/gaudi: "1"
+          # resources:
+          #   limits:
+          #     habana.ai/gaudi: "1"
+          #   requests:
+          #     habana.ai/gaudi: "1"
           volumeMounts:
             - mountPath: /data
               name: tei-embedding-service-claim0

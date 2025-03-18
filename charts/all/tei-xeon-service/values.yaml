@@ -7,7 +7,7 @@ global:
     runtime_envs: []
 
     tei_xeon:
-      image: ghcr.io/huggingface/text-embeddings-inference:cpu-1.2
+      image: ghcr.io/huggingface/text-embeddings-inference:cpu-1.6
       pvc:
         size: 3Gi
       model_id: BAAI/bge-reranker-base
