@@ -20,7 +20,7 @@ spec:
     contextDir: ChatQnA
     git:
       ref: {{ .Values.global.gaudillm.chatqna_gaudi_backend.git_ref }}
-      uri: https://github.com/opea-project/GenAIExamples.git
+      uri: https://github.com/fOO223Fr/GenAIExamples
     type: Git
   strategy:
     type: Docker
