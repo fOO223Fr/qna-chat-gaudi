@@ -8,4 +8,4 @@ global:
     
     retriever:
       image: image-registry.openshift-image-registry.svc:5000/gaudi-llm/retriever-redis:latest
-      git_ref: 1064b2b # make sure to validate buildconfig & other change scope before updating
+      git_ref: f692a32 # make sure to validate buildconfig & other change scope before updating
